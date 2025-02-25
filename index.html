@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "uJdPPMvyd7xUe9RLL",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contactme")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("service_3921oli", "template_pfk906m", this).then(
+              () => {
+                console.log("SUCCESS!");
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo-container">
+            <img src="images/logo.png" alt="Logo" class="logo" />
+            <div class="logo-text">inakshi</div>
+          </div>
+
+          <div class="nav-items">
+            <div><a href="#projects">Projects</a></div>
+            <div><a href="#skills">Skills</a></div>
+            <div><a href="#contactme">Contact Me</a></div>
+          </div>
+        </div>
+        <div class="hero-section">
+          <div class="fadded-text">Minakshi</div>
+          <div class="hero-section-left">
+            <div class="hero-section-heading">Hi, This is Minakshi</div>
+            <div class="hero-section-subheading hero-section-heading">
+              I am a <span class="role">Computer Science Enthusiast</span>
+            </div>
+            <div class="hero-section-developer">
+              Experience Computer Science Instructor with a strong understanding
+              of programming and software development.
+            </div>
+            <a href="#contactme" class="btn btn-width">Hire Me</a>
+          </div>
+          <div class="hero-section-right">
+            <div class="icons absolute icon1">
+              <img src="images/icon1.png" class="imgsize" alt="" />
+            </div>
+            <div class="icons absolute icon2">
+              <img src="images/icon2.png" class="imgsize" alt="" />
+            </div>
+            <div class="icons absolute icon3">
+              <img src="images/icon3.png" class="imgsize" alt="" />
+            </div>
+            <div class="icons absolute icon4">
+              <img src="images/icon4.png" class="imgsize" alt="" />
+            </div>
+
+            <div class="user-image">
+              <img
+                src="images/user-image.jpeg"
+                height="300px"
+                width="300px"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section" id="projects">
+        <h2 class="page-header">Projects</h2>
+        <div class="project-container">
+          <div class="project-card project-content-left" id="project1">
+            <div class="project-number project-number-right">01</div>
+            <div class="project-content project-content-left">
+              <div class="project-skill-container">
+                <img class="project-skill" src="images/jslogo.png" alt="" />
+                <img class="project-skill" src="images/htmllogo.png" alt="" />
+                <img class="project-skill" src="images/csslogo.png" alt="" />
+              </div>
+              <div class="project-heading">Stone paper Scissor</div>
+              <div class="project-subheading">
+                A stone paper scissor game made with HTML, CSS and Javascipt
+              </div>
+              <div class="btn-group">
+                <a
+                  href="https://stonepaperscissormk.netlify.app/"
+                  target="_blank"
+                  class="btn margin"
+                  >Visit</a
+                >
+                <a
+                  href="https://github.com/minakshikataria2001/stonepaperscissor.git"
+                  target="_blank"
+                >
+                  <img src="images/githubIcon.png" alt="" class="linkimages" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card project-content-right" id="project2">
+            <div class="project-number project-number-left">02</div>
+            <div class="project-content project-content-right">
+              <div class="project-skill-container">
+                <img class="project-skill" src="images/jslogo.png" alt="" />
+                <img class="project-skill" src="images/htmllogo.png" alt="" />
+                <img class="project-skill" src="images/csslogo.png" alt="" />
+                <img class="project-skill" src="images/apilogo.png" alt="" />
+              </div>
+              <div class="project-heading">Currency Converter</div>
+              <div class="project-subheading">
+                A web application that converts currencies in real-time using a
+                reliable exchange rate API.
+              </div>
+              <div class="btn-group">
+                <a
+                  href="https://currency-converter-lac-psi.vercel.app/"
+                  target="_blank"
+                  class="btn margin"
+                  >Visit</a
+                >
+                <a
+                  href="https://github.com/minakshikataria2001/currencyConverter.git"
+                  target="_blank"
+                >
+                  <img src="images/githubIcon.png" alt="" class="linkimages" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card project-content-left" id="project3">
+            <div class="project-number project-number-right">03</div>
+            <div class="project-content project-content-left">
+              <div class="project-skill-container">
+                <img class="project-skill" src="images/jslogo.png" alt="" />
+                <img class="project-skill" src="images/htmllogo.png" alt="" />
+                <img class="project-skill" src="images/csslogo.png" alt="" />
+              </div>
+              <div class="project-heading">Tic Tac Toe</div>
+              <div class="project-subheading">
+                The OG Tic Tac Toe game we play on paper.
+              </div>
+              <div class="btn-group">
+                <a
+                  href="https://minakshikataria2001.github.io/tictaetoe/"
+                  target="_blank"
+                  class="btn margin"
+                  >Visit</a
+                >
+                <a
+                  href="https://github.com/minakshikataria2001/tictaetoe.git"
+                  target="_blank"
+                >
+                  <img src="images/githubIcon.png" alt="" class="linkimages" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-container container" id="skills">
+        <div class="skills-fadded-text">Skills</div>
+
+        <div class="left-skill-section">
+          <h2 class="skills-heading">
+            <span class="caps">M</span>e and
+            <br />
+            My tech stack
+          </h2>
+          <p>
+            Taught programming languages like C, C++, Java, and Python to
+            undergraduate students.
+          </p>
+          <p>
+            Assisted in curriculum development and prepared study materials for
+            computer science courses.
+          </p>
+          <p>
+            Conducted practical lab sessions and helped students with coding
+            assignments and projects.
+          </p>
+        </div>
+
+        <div class="right-skill-section">
+          <img src="images/jslogo.png" alt="" class="skillimages" />
+          <img src="images/htmllogo.png" alt="" class="skillimages" />
+          <img src="images/csslogo.png" alt="" class="skillimages" />
+          <img src="images/apilogo.png" alt="" class="skillimages" />
+          <img src="images/linkIcon.png" alt="" class="skillimages" />
+          <img src="images/javalogo.png" alt="" class="skillimages" />
+          <img src="images/cpplogo.png" alt="" class="skillimages" />
+          <img src="images/pythonlogo.png" alt="" class="skillimages" />
+          <img src="images/nextlogo.png" alt="" class="skillimages" />
+          <img src="images/githubIcon.png" alt="" class="skillimages" />
+        </div>
+      </div>
+
+      <form class="contactus-form-container" id="contactme">
+        <div class="container form-container">
+          <h1 class="contactus-heading">Contact Me</h1>
+          <h3 class="contactus-subheading">
+            Questions,thoughts or just want to say hello!
+          </h3>
+
+          <div class="contactus-form-container-value">
+            <input
+              type="text"
+              class="inputbox"
+              name="name"
+              placeholder="enter your name"
+            />
+            <input
+              type="email"
+              name="email"
+              class="inputbox"
+              placeholder="enter your email address"
+            />
+            <textarea
+              rows="4"
+              name="desc"
+              class="inputbox inputmsg"
+              placeholder="enter your message"
+            ></textarea>
+            <input
+              type="submit"
+              id="submit"
+              value="submit"
+              class="btn btn-width"
+            />
+          </div>
+        </div>
+      </form>
+
+      <div class="footer-container">
+        <img src="images/logo.png" alt="" class="linkimages" />
+        <a href="https://github.com/minakshikataria2001" target="_blank">
+          <img src="images/githubIcon.png" alt="" class="linkimages" />
+        </a>
+        <span>Email - minakshikataria2001@gmail.com</span>
+      </div>
+    </div>
+  </body>
+</html>
